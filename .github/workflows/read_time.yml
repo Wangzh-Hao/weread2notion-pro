@@ -39,7 +39,7 @@ jobs:
       HEATMAP_SPECIAL_COLOR2: ${{ vars.special_color2 || '#549F57' }}
       HEATMAP_EMPTY_COLOR: ${{ vars.dom_color || '#EBEDF0' }}
       HEATMAP_TEXT_COLOR: ${{ vars.text_color || '#000000' }}
-      WEREAD_READ_TIMES_FILE: ${{ runner.temp }}/weread-read-times.json
+      WEREAD_READ_TIMES_FILE: /tmp/weread-read-times.json
     steps:
       - name: Checkout
         uses: actions/checkout@v5
