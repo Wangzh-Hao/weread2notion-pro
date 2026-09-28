@@ -3,6 +3,11 @@
 
 本项目通过Github Action每天定时同步微信读书划线到Notion。
 
+阅读时长和热力图通过微信读书官方 Agent API 获取。请在仓库的
+`Settings > Secrets and variables > Actions` 中添加名为 `WEREAD_API_KEY`
+的 Secret（格式为 `wrk-xxxxxxxx`）。笔记和划线同步仍使用
+`WEREAD_COOKIE`。
+
 预览效果：[https://malinkang.notion.site/malinkang/534a7684b30e4a879269313f437f2185](https://malinkang.notion.site/9a311b7413b74c8788752249edd0b256?pvs=25)
 
 

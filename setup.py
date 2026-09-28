@@ -8,7 +8,6 @@ setup(
         "pendulum",
         "retrying",
         "notion-client",
-        "github-heatmap",
         "python-dotenv", 
     ],
     entry_points={

@@ -246,8 +246,12 @@ class NotionHelper:
             "最后同步时间": {"date": {"start": pendulum.now("Asia/Shanghai").isoformat()}},
             "NotinToken": {"rich_text": [{"type": "text", "text": {"content": os.getenv("NOTION_TOKEN")}}]},
             "NotinPage": {"rich_text": [{"type": "text", "text": {"content": os.getenv("NOTION_PAGE")}}]},
-            "WeReadCookie": {"rich_text": [{"type": "text", "text": {"content": os.getenv("WEREAD_COOKIE")}}]},
         }
+        weread_cookie = os.getenv("WEREAD_COOKIE")
+        if weread_cookie:
+            properties["WeReadCookie"] = {
+                "rich_text": [{"type": "text", "text": {"content": weread_cookie}}]
+            }
         if existing_pages:
             remote_properties = existing_pages[0].get("properties")
             self.show_color = get_property_value(remote_properties.get("根据划线颜色设置文字颜色"))
