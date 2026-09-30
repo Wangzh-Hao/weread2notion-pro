@@ -89,7 +89,11 @@ class WeReadApi:
             "https://weread.qq.com/web/shelf/sync?synckey=0&teenmode=0&album=1&onlyBookid=0"
         )
         if r.ok:
-            return r.json()
+            data = r.json()
+            errcode = data.get("errcode")
+            if errcode not in (None, 0):
+                self.handle_errcode(errcode)
+            return data
         else:
             errcode = r.json().get("errcode",0)
             self.handle_errcode(errcode)
@@ -108,7 +112,10 @@ class WeReadApi:
         r = self.session.get(WEREAD_NOTEBOOKS_URL)
         if r.ok:
             data = r.json()
-            books = data.get("books")
+            errcode = data.get("errcode")
+            if errcode not in (None, 0):
+                self.handle_errcode(errcode)
+            books = data.get("books") or []
             books.sort(key=lambda x: x["sort"])
             return books
         else:
