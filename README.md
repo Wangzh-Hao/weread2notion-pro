@@ -5,8 +5,8 @@
 
 阅读时长和热力图通过微信读书官方 Agent API 获取。请在仓库的
 `Settings > Secrets and variables > Actions` 中添加名为 `WEREAD_API_KEY`
-的 Secret（格式为 `wrk-xxxxxxxx`）。笔记和划线同步仍使用
-`WEREAD_COOKIE`。
+的 Secret（格式为 `wrk-xxxxxxxx`）。阅读统计、书架、笔记和划线同步均使用
+同一个 `WEREAD_API_KEY`，无需配置 `WEREAD_COOKIE`。
 
 Notion 同步需要另外配置：
 
@@ -16,7 +16,7 @@ Notion 同步需要另外配置：
 - `NOTION_PAGE`：包含书架、笔记、划线和阅读统计数据库的父页面完整链接。
 
 请把新建的个人连接加入该父页面，并只在 GitHub Actions Secrets 中保存
-Token。程序不会把 `NOTION_TOKEN` 或 `WEREAD_COOKIE` 写入 Notion 页面。
+Token。程序不会把 `NOTION_TOKEN` 或微信读书凭据写入 Notion 页面。
 
 预览效果：[https://malinkang.notion.site/malinkang/534a7684b30e4a879269313f437f2185](https://malinkang.notion.site/9a311b7413b74c8788752249edd0b256?pvs=25)
 

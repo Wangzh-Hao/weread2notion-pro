@@ -97,6 +97,10 @@ class WeReadAgentClient:
                 return nested
         return body
 
+    def request(self, api_name, **params):
+        """Call one documented Agent Gateway endpoint."""
+        return self._request(api_name, **params)
+
     def get_read_data(self, mode="monthly", base_time=0):
         return self._request(
             "/readdata/detail",
