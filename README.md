@@ -8,6 +8,16 @@
 的 Secret（格式为 `wrk-xxxxxxxx`）。笔记和划线同步仍使用
 `WEREAD_COOKIE`。
 
+Notion 同步需要另外配置：
+
+- `NOTION_TOKEN`：在 Notion 的 `Settings > Developer > Personal access tokens`
+  中创建，仅需开启 `Notion API` capability。不要使用公共 `WeReadPro`
+  connection；公共连接不会向安装用户提供 API Token。
+- `NOTION_PAGE`：包含书架、笔记、划线和阅读统计数据库的父页面完整链接。
+
+请把新建的个人连接加入该父页面，并只在 GitHub Actions Secrets 中保存
+Token。程序不会把 `NOTION_TOKEN` 或 `WEREAD_COOKIE` 写入 Notion 页面。
+
 预览效果：[https://malinkang.notion.site/malinkang/534a7684b30e4a879269313f437f2185](https://malinkang.notion.site/9a311b7413b74c8788752249edd0b256?pvs=25)
 
 

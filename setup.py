@@ -7,7 +7,7 @@ setup(
         "requests",
         "pendulum",
         "retrying",
-        "notion-client",
+        "notion-client==2.5.0",
         "python-dotenv", 
     ],
     entry_points={

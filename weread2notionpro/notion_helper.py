@@ -205,9 +205,7 @@ class NotionHelper:
         ]
         properties = {
             "标题": {"title": {}},
-            "NotinToken": {"rich_text": {}},
             "NotinPage": {"rich_text": {}},
-            "WeReadCookie": {"rich_text": {}},
             "根据划线颜色设置文字颜色": {"checkbox": {}},
             "同步书签": {"checkbox": {}},
             # "Cookie状态": {
@@ -244,16 +242,16 @@ class NotionHelper:
         properties = {
             "标题": {"title": [{"type": "text", "text": {"content": "设置"}}]},
             "最后同步时间": {"date": {"start": pendulum.now("Asia/Shanghai").isoformat()}},
-            "NotinToken": {"rich_text": [{"type": "text", "text": {"content": os.getenv("NOTION_TOKEN")}}]},
             "NotinPage": {"rich_text": [{"type": "text", "text": {"content": os.getenv("NOTION_PAGE")}}]},
         }
-        weread_cookie = os.getenv("WEREAD_COOKIE")
-        if weread_cookie:
-            properties["WeReadCookie"] = {
-                "rich_text": [{"type": "text", "text": {"content": weread_cookie}}]
-            }
         if existing_pages:
             remote_properties = existing_pages[0].get("properties")
+            # Older versions stored credentials as plain text in the settings page.
+            # Clear those values when the legacy columns are present, and never write
+            # credentials into Notion again.
+            for secret_property in ("NotinToken", "WeReadCookie"):
+                if secret_property in remote_properties:
+                    properties[secret_property] = {"rich_text": []}
             self.show_color = get_property_value(remote_properties.get("根据划线颜色设置文字颜色"))
             self.sync_bookmark = get_property_value(remote_properties.get("同步书签"))
             self.block_type = get_property_value(remote_properties.get("样式"))

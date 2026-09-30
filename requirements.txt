@@ -1,5 +1,5 @@
 requests
-notion-client
+notion-client==2.5.0
 retrying
 pendulum
 python-dotenv
