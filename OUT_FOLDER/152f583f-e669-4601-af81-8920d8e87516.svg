@@ -3,7 +3,7 @@
 <rect width="100%" height="100%" rx="8" fill="#FFFFFF"/>
 <g font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Microsoft YaHei,sans-serif">
 <text x="48" y="24" font-size="15" font-weight="600" fill="#000000">2026 微信读书</text>
-<text x="790" y="24" text-anchor="end" font-size="12" fill="#000000">共 204.8 小时</text>
+<text x="790" y="24" text-anchor="end" font-size="12" fill="#000000">共 204.9 小时</text>
 <text x="36" y="77" text-anchor="end" font-size="10" fill="#000000">一</text>
 <text x="36" y="105" text-anchor="end" font-size="10" fill="#000000">三</text>
 <text x="36" y="133" text-anchor="end" font-size="10" fill="#000000">五</text>
@@ -110,7 +110,7 @@
 <rect x="244" y="82" width="11" height="11" rx="2" fill="#D1F2D2"><title>2026-04-07：2 分钟</title></rect>
 <rect x="244" y="96" width="11" height="11" rx="2" fill="#ACE7AE"><title>2026-04-08：4 分钟</title></rect>
 <rect x="244" y="110" width="11" height="11" rx="2" fill="#69C16E"><title>2026-04-09：23 分钟</title></rect>
-<rect x="244" y="124" width="11" height="11" rx="2" fill="#ACE7AE"><title>2026-04-10：21 分钟</title></rect>
+<rect x="244" y="124" width="11" height="11" rx="2" fill="#69C16E"><title>2026-04-10：21 分钟</title></rect>
 <rect x="244" y="138" width="11" height="11" rx="2" fill="#549F57"><title>2026-04-11：287 分钟</title></rect>
 <rect x="258" y="54" width="11" height="11" rx="2" fill="#549F57"><title>2026-04-12：184 分钟</title></rect>
 <rect x="258" y="68" width="11" height="11" rx="2" fill="#69C16E"><title>2026-04-13：49 分钟</title></rect>
@@ -292,7 +292,7 @@
 <text x="594" y="44" font-size="10" fill="#000000">10月</text>
 <rect x="594" y="110" width="11" height="11" rx="2" fill="#EBEDF0"><title>2026-10-01：0 分钟</title></rect>
 <rect x="594" y="124" width="11" height="11" rx="2" fill="#ACE7AE"><title>2026-10-02：14 分钟</title></rect>
-<rect x="594" y="138" width="11" height="11" rx="2" fill="#EBEDF0"><title>2026-10-03：0 分钟</title></rect>
+<rect x="594" y="138" width="11" height="11" rx="2" fill="#ACE7AE"><title>2026-10-03：3 分钟</title></rect>
 <rect x="608" y="54" width="11" height="11" rx="2" fill="#EBEDF0"><title>2026-10-04：0 分钟</title></rect>
 <rect x="608" y="68" width="11" height="11" rx="2" fill="#EBEDF0"><title>2026-10-05：0 分钟</title></rect>
 <rect x="608" y="82" width="11" height="11" rx="2" fill="#EBEDF0"><title>2026-10-06：0 分钟</title></rect>
