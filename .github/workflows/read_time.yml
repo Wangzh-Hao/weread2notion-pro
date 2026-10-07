@@ -73,7 +73,20 @@ jobs:
             echo "nothing to commit"
           else
             git commit -m 'add new heatmap'
-            git push
+            for attempt in 1 2 3; do
+              if git push; then
+                break
+              fi
+
+              if [ "$attempt" -eq 3 ]; then
+                echo "::error::Failed to push heatmap after 3 attempts."
+                exit 1
+              fi
+
+              wait_seconds=$((attempt * 10))
+              echo "Push attempt $attempt failed; retrying in ${wait_seconds}s..."
+              sleep "$wait_seconds"
+            done
           fi
       - name: Sync reading time to Notion
         run: python -m weread2notionpro.read_time
