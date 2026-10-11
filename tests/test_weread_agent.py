@@ -40,7 +40,7 @@ class WeReadAgentClientTests(unittest.TestCase):
         payload = session.calls[0][1]["json"]
         self.assertEqual(payload["api_name"], "/readdata/detail")
         self.assertEqual(payload["mode"], "annually")
-        self.assertEqual(payload["skill_version"], "1.0.4")
+        self.assertEqual(payload["skill_version"], "1.0.5")
 
     def test_upgrade_notice_stops_processing(self):
         session = FakeSession([{"upgrade_info": {"message": "请升级"}}])

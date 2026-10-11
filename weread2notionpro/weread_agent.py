@@ -9,7 +9,7 @@ import requests
 
 
 GATEWAY_URL = "https://i.weread.qq.com/api/agent/gateway"
-SKILL_VERSION = "1.0.4"
+SKILL_VERSION = "1.0.5"
 TIME_ZONE = timezone(timedelta(hours=8), name="Asia/Shanghai")
 
 
